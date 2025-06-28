@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Kalki-Mailer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Orbitron', sans-serif;
+      background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+      background-size: 400% 400%;
+      animation: gradientFlow 12s ease infinite;
+      color: #e0e0e0;
+    }
+
+    @keyframes gradientFlow {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .container {
+      max-width: 540px;
+      margin: 60px auto;
+      padding: 40px 30px;
+      background: rgba(20, 20, 40, 0.85);
+      border-radius: 16px;
+      box-shadow: 0 0 30px #00f7ff88;
+      backdrop-filter: blur(10px);
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 26px;
+      color: #00f7ff;
+      margin-bottom: 25px;
+      text-shadow: 0 0 10px #00f7ff;
+    }
+
+    label {
+      display: block;
+      margin: 15px 0 6px;
+      font-weight: 600;
+      color: #ff00cc;
+    }
+
+    input[type="email"],
+    input[type="password"],
+    input[type="text"],
+    textarea,
+    input[type="file"] {
+      width: 100%;
+      padding: 10px 12px;
+      font-size: 14px;
+      border: 1px solid #00f7ff55;
+      border-radius: 8px;
+      background-color: rgba(255, 255, 255, 0.05);
+      color: #e0e0e0;
+      transition: border 0.3s, box-shadow 0.3s;
+    }
+
+    input:focus,
+    textarea:focus {
+      border-color: #00f7ff;
+      outline: none;
+      box-shadow: 0 0 8px #00f7ff;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    input[type="submit"] {
+      background-color: #ff00cc;
+      color: #fff;
+      font-weight: 600;
+      padding: 12px;
+      margin-top: 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 0 12px #ff00cc88;
+      transition: background 0.3s, box-shadow 0.3s;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #ff33dd;
+      box-shadow: 0 0 18px #ff00ccaa;
+    }
+
+    .footer {
+      margin-top: 25px;
+      text-align: center;
+      font-size: 13px;
+      color: #999;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>💌 Kalki-Mailer</h2>
+    <form method="POST" enctype="multipart/form-data">
+      <label for="smtp_file">Upload SMTP List (.csv):</label>
+      <input type="file" name="smtp_file" accept=".csv" required>
+
+      <label for="subject">Subject:</label>
+      <input type="text" name="subject" required>
+
+      <label for="message">Message:</label>
+      <textarea name="message" required></textarea>
+
+      <label for="email_file">Upload Email List (.txt):</label>
+      <input type="file" name="email_file" accept=".txt" required>
+
+      <label for="attachment">Attachment (optional):</label>
+      <input type="file" name="attachment" accept="*/*">
+
+      <input type="submit" value="🚀 Send Emails">
+    </form>
+    <div class="footer">🌐 Powered by <strong>Kalki-Mailer</strong> • Cyberpunk Edition</div>
+  </div>
+</body>
+</html>
